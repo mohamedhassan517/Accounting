@@ -1,0 +1,15 @@
+directories:
+  output: dist
+  buildResources: electron
+appId: com.accounting.desktop
+productName: Accounting System
+files:
+  - filter:
+      - dist/spa/**/*
+      - electron/**/*
+      - package.json
+win:
+  target:
+    - nsis
+  artifactName: ${productName}-Setup-${version}.${ext}
+electronVersion: 38.1.2
